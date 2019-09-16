@@ -738,7 +738,7 @@ ul.sub-menu li a {
 
     #cssmenu ul {
         width: 100%;
-        display: none
+        display: none;     position: absolute;
     }
 
     #cssmenu ul li {
@@ -837,8 +837,8 @@ ul.sub-menu li a {
         display: block;
         height: 8px;
         width: 20px;
-        border-top: 2px solid #3B8BeB;
-        border-bottom: 2px solid #3B8BeB;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
         content: '';
     }
 
@@ -852,7 +852,7 @@ ul.sub-menu li a {
         display: block;
         height: 2px;
         width: 20px;
-        background: #3B8BeB;
+        background: #fff;
         content: '';
     }
 
@@ -864,7 +864,7 @@ ul.sub-menu li a {
         border: 0;
         height: 2px;
         width: 19px;
-        background: #3B8BeB;
+        background: #fff;
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -874,7 +874,7 @@ ul.sub-menu li a {
 
     #cssmenu .button.menu-opened:before {
         top: 23px;
-        background: #3B8BeB;
+        background: #fff;
         width: 19px;
         -webkit-transform: rotate(-45deg);
         -moz-transform: rotate(-45deg);
@@ -973,7 +973,7 @@ ul.my-account-link a{
 li.book_trip {
     background: #F32855;
     /*    float: right;*/
-    margin-top: 15px;
+    margin-top: 22px;
     border-radius: 3px;
 }
 
@@ -1283,3 +1283,94 @@ section#top-star {
     box-shadow: none;
 }
 .m-t30{    margin-top: 30px;}
+
+
+/* RESPONSIVE START */
+
+@media screen and (max-width: 994px) {
+
+input.form-control {
+    box-sizing: border-box;
+    height: 59px;
+    width: 430px!important;
+    border: 2px solid #F32855;
+    border-radius: 3.9px;
+    background: #000;
+    color: rgba(202, 207, 209, 0.7);
+    font-weight: bold;
+    /* flex-wrap: inherit; */
+    /* display: flex; */
+}
+.inner {
+ margin-bottom: 90px;
+}
+.m-t30 {
+    margin-top: 0;
+}
+ul.my-account-link {
+    float: left;
+    display: none;
+}
+
+}
+
+
+
+
+@media screen and (max-width: 680px) {
+	ul.my-account-link {
+   
+    display: block;
+}
+button#button-addon6 {
+    height: 59px;
+    width: 100%;
+    border-radius: 3.9px!important;
+    background-color: #F32855;
+    border: none!important;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    /* display: inherit; */
+    margin-top: 8px;
+}
+
+.input-group-append {
+    width: 100%;
+    text-align: center;
+}
+input.form-control {
+    box-sizing: border-box;
+    height: 59px;
+    width: 100%!important;
+    border: 2px solid #F32855;
+    border-radius: 3.9px!important;
+    background: #000;
+    color: rgba(202, 207, 209, 0.7);
+    font-weight: bold;
+    /* flex-wrap: inherit; */
+    /* display: flex; */
+}
+.hero-banner-content h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+}	
+ul.my-account-link {
+    float: right;
+    text-align: center;
+    width: 100%;
+}
+.top-logo {
+max-width: 150px;}
+header {
+ 
+top: 0;}
+.inner {
+ margin-bottom: 90px;
+}
+.m-t30 {
+    margin-top: 0;
+}
+	
+}
