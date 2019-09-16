@@ -6,12 +6,29 @@ import SearchData from '../components/service/searchData'
 const SearchDataApi = new SearchData();
 
 class Header extends React.Component {
-  state = {
-    currency: 'USD'
+
+
+
+  constructor(props){
+    super(props);
+    this.categoryEl = React.createRef();
+    this.state={
+      currency: 'USD'
+    }
   }
 
+
   getSearchData(){
-    SearchDataApi.getSearchData();
+    event.preventDefault();
+    let userInfo={
+        'category':this.categoryEl.current.value
+    }
+    SearchDataApi.getSearchData(userInfo)
+    .then(result => {
+      console.log('xxxxxxxxxxx reg', result);
+    }).catch(err => {
+        console.log("xxxxxxxx xxxxxxxxxx xxxx err is ", err);
+    });
   }
 
   render () {
@@ -30,7 +47,10 @@ class Header extends React.Component {
 
                 <div className='input-group mb-3'>
                   <input
-                    type='search'
+                    name="category"  
+                    id="category" 
+                    ref={this.categoryEl}
+                    type='text'
                     placeholder='Enter keywords e.g. Canada, Fashion, Football'
                     aria-describedby='button-addon6'
                     className='form-control'
